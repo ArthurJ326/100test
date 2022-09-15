@@ -32,6 +32,9 @@ class Ui_MainWindow(object):
         self.gridLayout.setObjectName(u"gridLayout")
         self.gridLayout.setContentsMargins(0, 0, 0, 0)
         self.pushButton_4 = QPushButton(self.widget)
+        print(self.pushButton_4.sizeHint().width())
+        print(self.pushButton_4.sizeHint().height())
+
         self.pushButton_4.setObjectName(u"pushButton_4")
 
         self.gridLayout.addWidget(self.pushButton_4, 3, 2, 1, 1)
