@@ -9,15 +9,16 @@
 ################################################################################
 
 from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
-    QMetaObject, QObject, QPoint, QRect,
-    QSize, QTime, QUrl, Qt)
+                            QMetaObject, QObject, QPoint, QRect,
+                            QSize, QTime, QUrl, Qt)
 from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
-    QFont, QFontDatabase, QGradient, QIcon,
-    QImage, QKeySequence, QLinearGradient, QPainter,
-    QPalette, QPixmap, QRadialGradient, QTransform)
+                           QFont, QFontDatabase, QGradient, QIcon,
+                           QImage, QKeySequence, QLinearGradient, QPainter,
+                           QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QCheckBox, QLineEdit, QMainWindow,
-    QMenuBar, QPushButton, QSizePolicy, QStatusBar,
-    QTextEdit, QWidget)
+                               QMenuBar, QPushButton, QSizePolicy, QStatusBar,
+                               QTextEdit, QWidget)
+
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -60,6 +61,7 @@ class Ui_MainWindow(object):
         self.checkBox_2.clicked["bool"].connect(self.textEdit.setEnabled)
 
         QMetaObject.connectSlotsByName(MainWindow)
+
     # setupUi
 
     def retranslateUi(self, MainWindow):
@@ -68,4 +70,3 @@ class Ui_MainWindow(object):
         self.checkBox.setText(QCoreApplication.translate("MainWindow", u"\u663e\u793a/\u9690\u85cf", None))
         self.checkBox_2.setText(QCoreApplication.translate("MainWindow", u"\u53ef\u7528/\u4e0d\u53ef\u7528", None))
     # retranslateUi
-

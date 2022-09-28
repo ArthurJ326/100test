@@ -95,8 +95,49 @@
      <height>22</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionOpen"/>
+    <addaction name="actionNew"/>
+    <addaction name="actionClose"/>
+   </widget>
+   <addaction name="menuFile"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionOpen"/>
+   <addaction name="actionNew"/>
+   <addaction name="actionClose"/>
+  </widget>
+  <action name="actionOpen">
+   <property name="text">
+    <string>Open</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+A</string>
+   </property>
+  </action>
+  <action name="actionNew">
+   <property name="text">
+    <string>New</string>
+   </property>
+  </action>
+  <action name="actionClose">
+   <property name="text">
+    <string>Close</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections>
@@ -118,17 +159,17 @@
   </connection>
   <connection>
    <sender>checkBox</sender>
-   <signal>clicked(bool)</signal>
+   <signal>toggled(bool)</signal>
    <receiver>lineEdit</receiver>
    <slot>setVisible(bool)</slot>
    <hints>
     <hint type="sourcelabel">
      <x>155</x>
-     <y>237</y>
+     <y>161</y>
     </hint>
     <hint type="destinationlabel">
      <x>158</x>
-     <y>254</y>
+     <y>181</y>
     </hint>
    </hints>
   </connection>
@@ -140,7 +181,7 @@
    <hints>
     <hint type="sourcelabel">
      <x>189</x>
-     <y>281</y>
+     <y>252</y>
     </hint>
     <hint type="destinationlabel">
      <x>180</x>
